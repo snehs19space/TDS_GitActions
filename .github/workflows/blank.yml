@@ -1,15 +1,12 @@
-# This is a basic workflow to help you get started with Actions
-
+# A simple workflow to demonstrate a custom step name.
 name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -22,20 +19,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-      
+      # A step with a name containing the required email address
+      - name: "Verification step for 23f3004197@ds.study.iitm.ac.in"
+        run: echo "This step is being checked by the grader!"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          
-      - name: 22f3003023@ds.study.iitm.ac.in
+      - name: A second step
         run: echo "Hello, world!"
-        
